@@ -40,6 +40,7 @@ services:
         DB_USER: wordpress
         DB_PASSWORD: password
         DB_HOST: mysql
+        DB_TABLE_PREFIX: wp_
     depends_on:
       - mysql
       - memcached
