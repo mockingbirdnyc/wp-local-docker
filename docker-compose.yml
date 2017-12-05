@@ -1,17 +1,17 @@
 version: '3'
 services:
-  mysql:
-    image: mysql:latest
-    volumes:
-      - "./data/db:/var/lib/mysql"
-    restart: always
-    ports:
-      - "3306:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: password
+#  mysql:
+#    image: mysql:latest
+#    volumes:
+#      - "./data/db:/var/lib/mysql"
+#    restart: always
+#    ports:
+#      - "3306:3306"
+#    environment:
+#      MYSQL_ROOT_PASSWORD: password
+#      MYSQL_DATABASE: wordpress
+#      MYSQL_USER: wordpress
+#      MYSQL_PASSWORD: password
   mailcatcher:
      image: schickling/mailcatcher
      restart: always
@@ -36,13 +36,22 @@ services:
   phpfpm:
     image: 10up/phpfpm
     environment:
-        DB_NAME: wordpress
+        # if you want to use local mysql, uncomment the mysql service block above, the depends block below
+#        and use the below env variables
+###################
+#        DB_NAME: wordpress
+#        DB_USER: wordpress
+#        DB_PASSWORD: password
+#        DB_HOST: mysql
+#        DB_TABLE_PREFIX: wp_
+        # copy of the AWS Environment Properties
+        DB_NAME: bitnami_wordpress
         DB_USER: wordpress
-        DB_PASSWORD: password
-        DB_HOST: mysql
-        DB_TABLE_PREFIX: wp_
+        DB_PASSWORD: NxuovgQ2R2
+        DB_HOST: mbirdwordpress.chc5sxkp1qgh.us-east-1.rds.amazonaws.com
+        DB_TABLE_PREFIX: wp_wo1o76_
     depends_on:
-      - mysql
+#      - mysql
       - memcached
       - elasticsearch
     volumes:
