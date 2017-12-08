@@ -1,3 +1,9 @@
 [submodule "wordpress"]
 	path = wordpress
 	url = https://github.com/mockingbirdnyc/wordpress.git
+[submodule "wordpress-mag"]
+	path = wordpress-mag
+	url = https://github.com/mockingbirdnyc/wordpress-mag
+[submodule "wordpress-conf"]
+	path = wordpress-conf
+	url = https://github.com/mockingbirdnyc/wordpress-conf

@@ -91,3 +91,7 @@ MailCatcher runs a simple local SMTP server which catches any message sent to it
 ## Credits
 
 This project is our own flavor of an environment created by John Bloch.
+
+you will need to potentially switch between local mysql and the aws version
+
+make sure you have pulled the latest from the wordpress submodule
