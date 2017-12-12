@@ -5,10 +5,12 @@ services:
         DB_NAME: bitnami_wordpress
         DB_USER: wordpress
         DB_PASSWORD: NxuovgQ2R2
-        DB_HOST: mbirdwordpress.chc5sxkp1qgh.us-east-1.rds.amazonaws.com
+        DB_HOST: mbirdwordpress-cluster.cluster-chc5sxkp1qgh.us-east-1.rds.amazonaws.com
         DB_TABLE_PREFIX: wp_wo1o76_
     volumes:
       - "./wordpress:/var/www/html"
   nginx:
     volumes:
       - "./wordpress:/var/www/html"
+    environment:
+          VIRTUAL_HOST: mbird.docker

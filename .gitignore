@@ -29,6 +29,10 @@ config.codekit
 
 /wordpress/*
 !/wordpress/.gitkeep
+/wordpress-conf/*
+!/wordpress-conf/.gitkeep
+/wordpress-mag/*
+!/wordpress-mag/.gitkeep
 
 /data/*
 !/data/.gitkeep

@@ -44,3 +44,4 @@ services:
       - "./config/certs:/etc/nginx/certs"
       - "./logs/nginx:/var/log/nginx"
     restart: always
+

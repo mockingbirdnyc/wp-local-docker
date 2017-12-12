@@ -1,0 +1,16 @@
+version: '3'
+services:
+  phpfpm:
+    environment:
+        DB_NAME: bitnami_wordpres
+        DB_USER: bn_wordpress
+        DB_PASSWORD: 9494647662
+        DB_HOST: mbird-conf.cluster-chc5sxkp1qgh.us-east-1.rds.amazonaws.com
+        DB_TABLE_PREFIX: wp_
+    volumes:
+      - "./wordpress-conf:/var/www/html"
+  nginx:
+    volumes:
+      - "./wordpress-conf:/var/www/html"
+    environment:
+              VIRTUAL_HOST: conf.docker
