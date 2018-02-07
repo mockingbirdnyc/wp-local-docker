@@ -88,10 +88,13 @@ Alternatively, there is a script in the `/bin` directory that allows you to SSH 
 
 MailCatcher runs a simple local SMTP server which catches any message sent to it, and displays it in it's built-in web interface. All emails sent by WordPress will be intercepted by MailCatcher. To view emails in the MailCatcher web interface, navigate to `http://localhost:1080` in your web browser of choice.
 
+## Gotchas
+
+You will need to potentially switch between local mysql and the aws version.
+
+Make sure you have pulled the latest from the wordpress submodule.
+
+
 ## Credits
 
 This project is our own flavor of an environment created by John Bloch.
-
-you will need to potentially switch between local mysql and the aws version
-
-make sure you have pulled the latest from the wordpress submodule
