@@ -7,3 +7,6 @@
 [submodule "wordpress-conf"]
 	path = wordpress-conf
 	url = https://github.com/mockingbirdnyc/wordpress-conf
+[submodule "wordpress-store"]
+	path = wordpress-store
+	url = https://github.com/mockingbirdnyc/wordpress-store

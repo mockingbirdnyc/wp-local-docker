@@ -1,0 +1,16 @@
+version: '3'
+services:
+  phpfpm:
+    environment:
+      DB_NAME: michaelcerrito_com_1
+      DB_USER: bn_wordpress
+      DB_PASSWORD: 9494647662
+      DB_HOST: mbird-store.chc5sxkp1qgh.us-east-1.rds.amazonaws.com
+      DB_TABLE_PREFIX: wp_52rbj9_
+    volumes:
+      - "./wordpress-store:/var/www/html"
+  nginx:
+    volumes:
+      - "./wordpress-store:/var/www/html"
+    environment:
+      VIRTUAL_HOST: store.docker
