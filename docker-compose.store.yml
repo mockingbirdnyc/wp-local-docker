@@ -2,7 +2,7 @@ version: '3'
 services:
   phpfpm:
     environment:
-      DB_NAME: michaelcerrito_com_1
+      DB_NAME: mbird_store_wordpress
       DB_USER: bn_wordpress
       DB_PASSWORD: 9494647662
       DB_HOST: mbird-store.chc5sxkp1qgh.us-east-1.rds.amazonaws.com
